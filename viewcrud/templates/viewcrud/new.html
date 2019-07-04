@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %} <!-- 보안상의 이유 -->
+        <table>
+            {{form.as_table}} <!-- 테이블 형식(표)으로 폼을 만들어주세요-->
+        </table>
+        <br>
+        <input type="submit" value="제출하기">
+    </form>
+</body>
+</html>
